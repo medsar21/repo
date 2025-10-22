@@ -118,21 +118,25 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
   };
 
   return (
-    <section 
-      className="relative py-20 md:py-24 -mt-32 overflow-hidden" 
+    <section
+      className="relative py-20 md:py-24 -mt-32 overflow-hidden"
       style={{
+        // Palette alignée avec la fin du Hero (profonde nuit + voile vert)
         background: `
-          linear-gradient(135deg, 
-            rgba(0, 98, 51, 0.95) 0%,
-            rgba(26, 35, 50, 0.98) 25%,
-            rgba(193, 39, 45, 0.15) 50%,
-            rgba(26, 35, 50, 0.98) 75%,
-            rgba(0, 98, 51, 0.95) 100%
+          /* Légère teinte verte en haut pour la continuité du Hero */
+          linear-gradient(to bottom,
+            rgba(0, 98, 51, 0.18) 0%,
+            rgba(0, 98, 51, 0.10) 10%,
+            rgba(0, 98, 51, 0.04) 25%,
+            transparent 45%
           ),
-          radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-          radial-gradient(circle at 80% 70%, rgba(193, 39, 45, 0.12) 0%, transparent 50%),
-          linear-gradient(180deg, rgba(10, 14, 21, 0.8) 0%, #0a0e15 15%, #141b28 100%)
-        `
+          /* Fond principal nuit profonde */
+          linear-gradient(180deg,
+            rgba(10, 14, 21, 0.98) 0%,
+            rgba(10, 14, 21, 1) 25%,
+            rgba(20, 27, 40, 1) 100%
+          )
+        `,
       }}
     >
       {/* Motif géométrique subtil en arrière-plan */}
@@ -147,22 +151,17 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
       {/* Overlay dégradé pour la profondeur */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
       
-      {/* Séparateur décoratif en haut avec effet de continuité et shimmer */}
-      <div className="absolute top-0 left-0 right-0 h-1 z-20 overflow-hidden">
-        <div 
-          className="h-full w-full gold-separator"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 15%, rgba(212, 175, 55, 0.8) 35%, rgba(255, 215, 0, 1) 50%, rgba(212, 175, 55, 0.8) 65%, rgba(212, 175, 55, 0.2) 85%, transparent 100%)',
-            boxShadow: '0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3)',
-          }}
-        />
-      </div>
-      
-      {/* Effet de lueur douce en haut */}
-      <div 
-        className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+      {/* Voile de continuité avec le Hero (fondu haut -> fond) */}
+      <div
+        className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.15) 0%, transparent 70%)',
+          background: `
+            linear-gradient(to bottom,
+              rgba(0, 98, 51, 0.25) 0%,
+              rgba(0, 98, 51, 0.12) 20%,
+              rgba(10, 14, 21, 0) 100%
+            )
+          `,
         }}
       />
       
