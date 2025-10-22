@@ -1,0 +1,108 @@
+[
+  {
+    "id": "equipe-a",
+    "nom": "Équipe A Masculine",
+    "nomCourt": "Lions de l'Atlas",
+    "categorie": "masculine",
+    "niveau": "senior",
+    "description": "L'équipe nationale A masculine du Maroc, surnommée les Lions de l'Atlas, représente le Maroc dans les compétitions internationales de football.",
+    "image": "/images/placeholder.svg",
+    "selectionneur": {
+      "nom": "Walid Regragui",
+      "photo": "/images/placeholder.svg?staff=regragui.jpg",
+      "nationalite": "Maroc"
+    },
+    "palmares": [
+      {
+        "titre": "Coupe d'Afrique des Nations",
+        "annee": 1976,
+        "position": "Champion"
+      },
+      {
+        "titre": "Coupe du Monde FIFA",
+        "annee": 2022,
+        "position": "Demi-finaliste"
+      },
+      {
+        "titre": "Coupe Arabe",
+        "annee": 2012,
+        "position": "Champion"
+      }
+    ],
+    "stats": {
+      "matchsJoues": 542,
+      "victoires": 234,
+      "nuls": 156,
+      "defaites": 152,
+      "butsMarques": 687,
+      "butsEncaisses": 512
+    },
+    "joueurs": ["hakimi", "ziyech", "mazraoui", "amrabat", "bounou", "en-nesyri", "ounahi", "amallah"]
+  },
+  {
+    "id": "equipe-feminine",
+    "nom": "Équipe Féminine",
+    "nomCourt": "Lionnes de l'Atlas",
+    "categorie": "feminine",
+    "niveau": "senior",
+    "description": "L'équipe nationale féminine du Maroc, les Lionnes de l'Atlas, représente fièrement le royaume dans le football féminin international.",
+    "image": "/images/placeholder.svg?eq=equipe-feminine.jpg",
+    "selectionneur": {
+      "nom": "Lamia Boumehdi",
+      "photo": "/images/placeholder.svg?staff=boumehdi.jpg",
+      "nationalite": "Maroc"
+    },
+    "palmares": [
+      {
+        "titre": "Coupe d'Afrique des Nations Féminine",
+        "annee": 2022,
+        "position": "Finaliste"
+      }
+    ],
+    "stats": {
+      "matchsJoues": 87,
+      "victoires": 42,
+      "nuls": 18,
+      "defaites": 27,
+      "butsMarques": 142,
+      "butsEncaisses": 98
+    },
+    "joueurs": ["gharbi", "redouani", "jraidi", "chebbak", "el-chad"]
+  },
+  {
+    "id": "equipe-u23",
+    "nom": "Équipe Olympique U23",
+    "nomCourt": "Lions U23",
+    "categorie": "masculine",
+    "niveau": "u23",
+    "description": "L'équipe olympique marocaine participe aux Jeux Olympiques et aux compétitions U23.",
+    "image": "/images/placeholder.svg?eq=equipe-u23.jpg",
+    "selectionneur": {
+      "nom": "Tarik Sektioui",
+      "photo": "/images/placeholder.svg?staff=sektioui.jpg",
+      "nationalite": "Maroc"
+    },
+    "palmares": [
+      {
+        "titre": "Jeux Olympiques",
+        "annee": 2004,
+        "position": "Médaille d'or"
+      },
+      {
+        "titre": "Jeux Africains",
+        "annee": 2019,
+        "position": "Champion"
+      }
+    ],
+    "stats": {
+      "matchsJoues": 156,
+      "victoires": 78,
+      "nuls": 34,
+      "defaites": 44,
+      "butsMarques": 245,
+      "butsEncaisses": 167
+    },
+    "joueurs": ["richardson", "akhomach", "jabrane", "el-ouahdi"]
+  }
+]
+

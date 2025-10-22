@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Fond rouge -->
+  <rect width="900" height="600" fill="#C1272D"/>
+  
+  <!-- Étoile verte centrale -->
+  <polygon points="450,150 476,230 560,230 492,280 518,360 450,310 382,360 408,280 340,230 424,230" fill="#006233"/>
+</svg>
+

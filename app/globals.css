@@ -1,0 +1,622 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  
+  /* PSG Style Variables */
+  --neutral-2: 250,251,252;
+  --neutral-5: 242,245,248;
+  --neutral-10: 230,236,241;
+  --neutral-20: 204,217,226;
+  --neutral-40: 153,179,198;
+  --neutral-60: 79,111,135;
+  --neutral-white: 255,255,255;
+  --bleu-paris: 0,64,112;
+  --or-paris: 206,171,93;
+  --rouge-paris: 227,6,19;
+  --dark-blue: 20,20,40;
+  --background-blue: 14,27,54;
+  --dark-gold: 165,139,76;
+  --bleu-premium: 26,43,76;
+  --bleu-second-1: 35,40,65;
+  --bleu-second-2: 0,79,145;
+  --cold-grey: 225,230,240;
+  
+  /* Spacing PSG */
+  --spacing-xs: .25rem;
+  --spacing-sm: .5rem;
+  --spacing-md: .75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
+  --spacing-2xl: 2rem;
+  --spacing-3xl: 3.5rem;
+  
+  /* Duration PSG */
+  --duration-instant: 25ms;
+  --duration-short-1: .1s;
+  --duration-short-2: .15s;
+  --duration-medium-1: .3s;
+  --duration-medium-2: .5s;
+  --duration-medium-3: .75s;
+  --duration-long-1: 1s;
+  
+  /* Ease PSG */
+  --ease-standard: cubic-bezier(.3,0,0,1);
+  
+  /* Typography PSG */
+  --font-size-d-headline-3: 1.75rem;
+  --font-size-d-body-3: 1.0625rem;
+  --font-size-d-body-4: .9375rem;
+  --font-size-d-body-5: .8125rem;
+  --font-size-d-overline-2: .6875rem;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Border radius */
+  --radius-xs: .125rem;
+  --radius-sm: .25rem;
+  --radius-md: .375rem;
+  --radius-lg: .5rem;
+  
+  /* Letter spacing */
+  --letter-spacing-tight: -.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: .025em;
+  --letter-spacing-widest: .1em;
+  
+  /* Background colors PSG */
+  --background-secondary: 242, 245, 248; /* Same as neutral-5 */
+  --background-tertiary: 35, 40, 65; /* Same as bleu-second-1 */
+  
+  /* Text colors PSG */
+  --content-primary: 20, 20, 40; /* Same as dark-blue */
+  --content-secondary: 79, 111, 135; /* Same as neutral-60 */
+  --content-black: 0, 0, 0;
+  
+  /* Padding PSG (using existing spacing) */
+  --p-lg: var(--spacing-lg);
+  --p-xl: var(--spacing-xl);
+  --px-xs: var(--spacing-xs);
+  --pt-0-75: .1875rem;
+  --pb-0-5: .125rem;
+  --top-0-5: .125rem;
+}
+
+/* Base Styles */
+* {
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
+  scroll-padding-top: 6rem; /* Pour compenser la navbar fixe */
+  overflow-x: hidden;
+}
+
+body {
+  @apply font-sans bg-white text-maroc-dark antialiased;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Momentum scrolling pour iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-maroc-red rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-maroc-green;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading font-bold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl lg:text-4xl;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Utility Classes */
+.animate-on-scroll {
+  @apply opacity-0 translate-y-8 transition-all duration-700;
+}
+
+.animate-on-scroll.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.gradient-maroc {
+  @apply bg-gradient-to-r from-maroc-red to-maroc-green;
+}
+
+.text-gradient-maroc {
+  @apply bg-gradient-maroc bg-clip-text text-transparent;
+}
+
+/* Button Styles */
+.btn {
+  @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out;
+}
+
+.btn-primary {
+  @apply btn bg-maroc-red text-white hover:bg-opacity-90 hover:shadow-maroc;
+}
+
+.btn-secondary {
+  @apply btn bg-maroc-green text-white hover:bg-opacity-90 hover:shadow-maroc-green;
+}
+
+.btn-outline {
+  @apply btn border-2 border-maroc-red text-maroc-red hover:bg-maroc-red hover:text-white;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2;
+}
+
+.card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.card-content {
+  @apply p-6;
+}
+
+/* Image Overlay */
+.image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent;
+}
+
+/* Section Spacing */
+.section {
+  @apply py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-8 text-center;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+}
+
+/* RTL Support (for Arabic) */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .rotate-icon {
+  transform: scaleX(-1);
+}
+
+/* Loading Skeleton */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-maroc-red ring-offset-2;
+}
+
+/* Print Styles */
+@media print {
+  header,
+  footer,
+  nav {
+    @apply hidden;
+  }
+}
+
+/* Séparateur doré animé */
+@keyframes shimmer-line {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-separator {
+  animation: shimmer-line 8s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+/* Typography PSG Classes */
+.typography-title-4 {
+  font-size: var(--font-size-d-body-4);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.typography-overline-2 {
+  font-size: var(--font-size-d-overline-2);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.bg-background-secondary {
+  background-color: rgb(var(--background-secondary));
+}
+
+.bg-background-tertiary {
+  background-color: rgb(var(--background-tertiary));
+}
+
+.text-content-primary {
+  color: rgb(var(--content-primary));
+}
+
+.text-content-secondary {
+  color: rgb(var(--content-secondary));
+}
+
+.text-content-black {
+  color: rgb(var(--content-black));
+}
+
+.p-lg {
+  padding: var(--p-lg);
+}
+
+.lg\:p-xl {
+  @media (min-width: 1024px) {
+    padding: var(--p-xl);
+  }
+}
+
+.gap-xs {
+  gap: var(--spacing-xs);
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.top-0-5 {
+  top: var(--top-0-5);
+}
+
+.duration-medium-1 {
+  transition-duration: var(--duration-medium-1);
+}
+
+/* Logo Effects */
+.logo-glow {
+  box-shadow: 0 0 20px rgba(193, 39, 45, 0.3), 0 0 40px rgba(0, 98, 51, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.logo-glow:hover {
+  box-shadow: 0 0 30px rgba(193, 39, 45, 0.5), 0 0 60px rgba(0, 98, 51, 0.3);
+}
+
+/* Navbar Enhancements */
+header {
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Smooth transitions for all interactive elements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* Custom Scrollbar for webkit browsers - Enhanced */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #C1272D, #D4AF37);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #D4AF37, #006233);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Pour Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C1272D rgba(0, 0, 0, 0.05);
+}
+
+/* Carousel Smooth Scroll - Enhanced */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  /* Améliore le scroll sur mobile */
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth snap scrolling pour les carousels */
+.carousel-content {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth Scroll Behavior - Enhanced */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optimisation pour les animations */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* Hardware acceleration pour les transformations */
+  .animate-slide-in-right,
+  .animate-slide-in-right-delay,
+  .animate-slide-in-right-delay-2,
+  .animate-slide-in-right-delay-3,
+  .animate-slide-in-fade-left {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
+
+/* Respecter les préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes slideInFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Clip Corner Effect - Style PSG Enhanced */
+.clip-corner {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 1rem) 0,
+    100% 1rem,
+    100% 100%,
+    0 100%
+  );
+  position: relative;
+}
+
+.clip-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background: linear-gradient(135deg, transparent 50%, rgba(212, 175, 55, 0.1) 50%);
+  transition: all 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.clip-corner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.6),
+              0 0 0 2px rgba(212, 175, 55, 0.15) !important;
+}
+
+.clip-corner:hover::before {
+  background: linear-gradient(135deg, transparent 50%, rgba(212, 175, 55, 0.25) 50%);
+}
+
+/* Animation slide-in-fade-left */
+@keyframes slide-in-fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-fade-left {
+  animation: slide-in-fade-left 0.5s ease-out forwards;
+}
+
+/* Hero Animations - Slide from Right */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out forwards;
+}
+
+.animate-slide-in-right-delay {
+  animation: slide-in-right 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right-delay-2 {
+  animation: slide-in-right 1s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right-delay-3 {
+  animation: slide-in-right 1s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero Frame Border Animation */
+.hero-frame-wrapper {
+  position: relative;
+}
+
+.hero-border-svg {
+  z-index: 1;
+}
+
+.hero-border-path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: drawBorder 2s ease-out forwards;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes drawBorder {
+  from {
+    stroke-dashoffset: 3000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+

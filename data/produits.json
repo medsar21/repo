@@ -1,0 +1,186 @@
+[
+  {
+    "id": "maillot-domicile-2024",
+    "nom": "Maillot Domicile 2024",
+    "description": "Maillot officiel de l'équipe nationale du Maroc pour la saison 2024. Design moderne avec motifs géométriques inspirés de l'architecture marocaine.",
+    "prix": 899,
+    "devise": "MAD",
+    "categorie": "Maillots",
+    "marque": "Puma",
+    "images": [
+      "/images/placeholder.svg?prod=maillot-domicile-2024-front.jpg",
+      "/images/placeholder.svg?prod=maillot-domicile-2024-back.jpg",
+      "/images/placeholder.svg?prod=maillot-domicile-2024-detail.jpg"
+    ],
+    "tailles": ["XS", "S", "M", "L", "XL", "XXL"],
+    "couleurs": ["Rouge"],
+    "caracteristiques": [
+      "Technologie Puma dryCELL",
+      "100% Polyester recyclé",
+      "Coupe athlétique",
+      "Logo FRMF brodé",
+      "Devise 'Dima Maghreb' à l'intérieur du col"
+    ],
+    "enStock": true,
+    "nouveaute": true
+  },
+  {
+    "id": "maillot-exterieur-2024",
+    "nom": "Maillot Extérieur 2024",
+    "description": "Maillot extérieur blanc avec détails verts et rouges. Élégance et performance réunies.",
+    "prix": 899,
+    "devise": "MAD",
+    "categorie": "Maillots",
+    "marque": "Puma",
+    "images": [
+      "/images/placeholder.svg?prod=maillot-exterieur-2024-front.jpg",
+      "/images/placeholder.svg?prod=maillot-exterieur-2024-back.jpg"
+    ],
+    "tailles": ["XS", "S", "M", "L", "XL", "XXL"],
+    "couleurs": ["Blanc"],
+    "caracteristiques": [
+      "Technologie Puma dryCELL",
+      "100% Polyester recyclé",
+      "Coupe athlétique",
+      "Logo FRMF brodé"
+    ],
+    "enStock": true,
+    "nouveaute": true
+  },
+  {
+    "id": "echarpe-supporters",
+    "nom": "Écharpe Officielle Lions de l'Atlas",
+    "description": "Écharpe tricotée aux couleurs du Maroc. Parfaite pour afficher votre soutien aux Lions.",
+    "prix": 199,
+    "devise": "MAD",
+    "categorie": "Accessoires",
+    "marque": "FRMF",
+    "images": [
+      "/images/placeholder.svg?prod=echarpe-supporters.jpg"
+    ],
+    "tailles": ["Unique"],
+    "couleurs": ["Rouge/Vert"],
+    "caracteristiques": [
+      "100% Acrylique",
+      "Dimensions: 140cm x 18cm",
+      "Flocage 'Lions de l'Atlas'",
+      "Logo FRMF tissé"
+    ],
+    "enStock": true,
+    "nouveaute": false
+  },
+  {
+    "id": "casquette-puma",
+    "nom": "Casquette Puma x Maroc",
+    "description": "Casquette réglable aux couleurs de l'équipe nationale.",
+    "prix": 249,
+    "devise": "MAD",
+    "categorie": "Accessoires",
+    "marque": "Puma",
+    "images": [
+      "/images/placeholder.svg?prod=casquette-front.jpg",
+      "/images/placeholder.svg?prod=casquette-side.jpg"
+    ],
+    "tailles": ["Unique (réglable)"],
+    "couleurs": ["Rouge", "Vert", "Blanc"],
+    "caracteristiques": [
+      "Visière incurvée",
+      "Logo FRMF brodé",
+      "Fermeture réglable à l'arrière",
+      "Matière respirante"
+    ],
+    "enStock": true,
+    "nouveaute": false
+  },
+  {
+    "id": "ballon-entrainement",
+    "nom": "Ballon d'Entraînement Officiel",
+    "description": "Ballon officiel d'entraînement de l'équipe nationale, aux couleurs du Maroc.",
+    "prix": 449,
+    "devise": "MAD",
+    "categorie": "Équipement",
+    "marque": "Puma",
+    "images": [
+      "/images/placeholder.svg?prod=ballon-officiel.jpg"
+    ],
+    "tailles": ["Taille 5"],
+    "couleurs": ["Rouge/Vert/Blanc"],
+    "caracteristiques": [
+      "Vessie en butyle pour une excellente rétention d'air",
+      "32 panneaux cousus machine",
+      "Certifié FIFA Quality",
+      "Revêtement en PU"
+    ],
+    "enStock": true,
+    "nouveaute": false
+  },
+  {
+    "id": "veste-presentation",
+    "nom": "Veste de Présentation 2024",
+    "description": "Veste officielle portée par les joueurs lors des cérémonies et conférences de presse.",
+    "prix": 699,
+    "devise": "MAD",
+    "categorie": "Vêtements",
+    "marque": "Puma",
+    "images": [
+      "/images/placeholder.svg?prod=veste-presentation-front.jpg",
+      "/images/placeholder.svg?prod=veste-presentation-back.jpg"
+    ],
+    "tailles": ["S", "M", "L", "XL", "XXL"],
+    "couleurs": ["Rouge/Vert"],
+    "caracteristiques": [
+      "Matière: Polyester",
+      "Fermeture zippée complète",
+      "Poches latérales zippées",
+      "Logo FRMF et Puma brodés",
+      "Coupe Regular Fit"
+    ],
+    "enStock": true,
+    "nouveaute": true
+  },
+  {
+    "id": "short-domicile-2024",
+    "nom": "Short Domicile 2024",
+    "description": "Short officiel assorti au maillot domicile. Confort et performance.",
+    "prix": 399,
+    "devise": "MAD",
+    "categorie": "Maillots",
+    "marque": "Puma",
+    "images": [
+      "/images/placeholder.svg?prod=short-domicile-2024.jpg"
+    ],
+    "tailles": ["S", "M", "L", "XL", "XXL"],
+    "couleurs": ["Rouge"],
+    "caracteristiques": [
+      "Technologie Puma dryCELL",
+      "Ceinture élastique avec cordon de serrage",
+      "100% Polyester recyclé",
+      "Logo FRMF imprimé"
+    ],
+    "enStock": true,
+    "nouveaute": true
+  },
+  {
+    "id": "mug-ceramique",
+    "nom": "Mug Céramique Lions de l'Atlas",
+    "description": "Mug en céramique de qualité supérieure avec logo et devise de l'équipe nationale.",
+    "prix": 99,
+    "devise": "MAD",
+    "categorie": "Accessoires",
+    "marque": "FRMF",
+    "images": [
+      "/images/placeholder.svg?prod=mug-lions.jpg"
+    ],
+    "tailles": ["330ml"],
+    "couleurs": ["Blanc/Rouge"],
+    "caracteristiques": [
+      "Céramique haute qualité",
+      "Passage au lave-vaisselle",
+      "Passage au micro-ondes",
+      "Impression haute résolution"
+    ],
+    "enStock": true,
+    "nouveaute": false
+  }
+]
+

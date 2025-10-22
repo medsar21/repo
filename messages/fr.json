@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "teams": "Équipes",
+    "team": "Équipe",
+    "players": "Joueurs",
+    "news": "Actualités",
+    "calendar": "Calendrier",
+    "tickets": "Billetterie",
+    "shop": "Boutique",
+    "club": "Le Club",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "seeAll": "Tout voir",
+    "discover": "Découvrir",
+    "buy": "Acheter",
+    "addToCart": "Ajouter au panier",
+    "learnMore": "En savoir plus",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "close": "Fermer",
+    "menu": "Menu"
+  },
+  "home": {
+    "heroTitle": "Les Lions de l'Atlas",
+    "heroSubtitle": "Fiers représentants du Royaume du Maroc",
+    "heroCta": "Découvrir",
+    "latestNews": "Dernières Actualités",
+    "upcomingMatches": "Prochains Matchs",
+    "featuredPlayers": "Joueurs Vedettes"
+  },
+  "teams": {
+    "title": "Nos Équipes",
+    "subtitle": "Découvrez toutes les sélections nationales du Maroc",
+    "masculine": "Équipe Masculine",
+    "feminine": "Équipe Féminine",
+    "u23": "Équipe U23",
+    "manager": "Sélectionneur",
+    "squad": "Effectif",
+    "honors": "Palmarès",
+    "stats": "Statistiques"
+  },
+  "players": {
+    "position": "Poste",
+    "birthDate": "Date de naissance",
+    "birthPlace": "Lieu de naissance",
+    "height": "Taille",
+    "weight": "Poids",
+    "club": "Club",
+    "number": "Numéro",
+    "caps": "Sélections",
+    "goals": "Buts",
+    "assists": "Passes décisives",
+    "biography": "Biographie",
+    "statistics": "Statistiques",
+    "honors": "Palmarès"
+  },
+  "news": {
+    "title": "Actualités",
+    "latest": "Dernières actualités",
+    "category": "Catégorie",
+    "author": "Auteur",
+    "publishedOn": "Publié le",
+    "tags": "Tags",
+    "relatedArticles": "Articles similaires"
+  },
+  "calendar": {
+    "title": "Calendrier",
+    "upcoming": "Matchs à venir",
+    "results": "Résultats",
+    "competition": "Compétition",
+    "stadium": "Stade",
+    "city": "Ville",
+    "date": "Date",
+    "time": "Heure",
+    "tv": "Diffusion TV",
+    "scorers": "Buteurs",
+    "matchCenter": "Centre du match"
+  },
+  "tickets": {
+    "title": "Billetterie",
+    "subtitle": "Réservez vos places pour suivre les Lions de l'Atlas",
+    "buyTickets": "Acheter des billets",
+    "pricing": "Tarifs",
+    "info": "Informations pratiques",
+    "packages": "Forfaits supporters"
+  },
+  "shop": {
+    "title": "Boutique Officielle",
+    "subtitle": "Les produits officiels de l'équipe nationale",
+    "categories": "Catégories",
+    "newProducts": "Nouveautés",
+    "price": "Prix",
+    "size": "Taille",
+    "color": "Couleur",
+    "inStock": "En stock",
+    "outOfStock": "Rupture de stock",
+    "features": "Caractéristiques",
+    "description": "Description"
+  },
+  "club": {
+    "title": "Le Club",
+    "about": "À propos",
+    "history": "Histoire",
+    "partners": "Partenaires",
+    "values": "Nos valeurs",
+    "mission": "Notre mission"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? N'hésitez pas à nous contacter",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "followUs": "Suivez-nous"
+  },
+  "footer": {
+    "dimaMaghreb": "Dima Maghreb",
+    "slogan": "Toujours le Maroc",
+    "rights": "Fédération Royale Marocaine de Football - Tous droits réservés",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "newsletter": "Inscrivez-vous à notre newsletter",
+    "emailPlaceholder": "Votre email",
+    "subscribe": "S'inscrire"
+  }
+}
+

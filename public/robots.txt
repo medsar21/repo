@@ -1,0 +1,13 @@
+# robots.txt pour Lions de l'Atlas
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lions-atlas.ma/sitemap.xml
+
+# Interdictions
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+

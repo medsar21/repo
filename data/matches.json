@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1,
+    "equipeA": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Gabon",
+      "code": "GAB",
+      "drapeau": "/images/drapeaux/gabon.svg"
+    },
+    "date": "2024-11-15T20:00:00",
+    "competition": "Match Amical",
+    "stade": "Stade Prince Moulay Abdellah",
+    "ville": "Rabat",
+    "statut": "termine",
+    "score": {
+      "equipeA": 2,
+      "equipeB": 1
+    },
+    "buteurs": [
+      { "joueur": "En-Nesyri", "minute": 23, "equipe": "MAR" },
+      { "joueur": "Hakimi", "minute": 67, "equipe": "MAR" },
+      { "joueur": "Aubameyang", "minute": 82, "equipe": "GAB" }
+    ]
+  },
+  {
+    "id": 2,
+    "equipeA": {
+      "nom": "Tanzanie",
+      "code": "TAN",
+      "drapeau": "/images/drapeaux/tanzanie.svg"
+    },
+    "equipeB": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "date": "2024-11-22T18:00:00",
+    "competition": "CAN 2024 - Qualifications",
+    "stade": "Benjamin Mkapa Stadium",
+    "ville": "Dar es Salaam",
+    "statut": "a_venir",
+    "television": "beIN Sports"
+  },
+  {
+    "id": 3,
+    "equipeA": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Égypte",
+      "code": "EGY",
+      "drapeau": "/images/drapeaux/egypte.svg"
+    },
+    "date": "2024-11-26T21:00:00",
+    "competition": "CAN 2024 - Qualifications",
+    "stade": "Stade Mohammed V",
+    "ville": "Casablanca",
+    "statut": "a_venir",
+    "television": "beIN Sports, Al Aoula"
+  },
+  {
+    "id": 4,
+    "equipeA": {
+      "nom": "Espagne",
+      "code": "ESP",
+      "drapeau": "/images/drapeaux/espagne.svg"
+    },
+    "equipeB": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "date": "2024-12-03T19:30:00",
+    "competition": "Match Amical",
+    "stade": "Estadio Santiago Bernabéu",
+    "ville": "Madrid",
+    "statut": "a_venir",
+    "television": "beIN Sports"
+  },
+  {
+    "id": 5,
+    "equipeA": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Algérie",
+      "code": "ALG",
+      "drapeau": "/images/drapeaux/algerie.svg"
+    },
+    "date": "2024-12-10T20:00:00",
+    "competition": "Match Amical",
+    "stade": "Stade de Marrakech",
+    "ville": "Marrakech",
+    "statut": "a_venir",
+    "television": "Al Aoula, beIN Sports"
+  },
+  {
+    "id": 6,
+    "equipeA": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Brésil",
+      "code": "BRA",
+      "drapeau": "/images/drapeaux/bresil.svg"
+    },
+    "date": "2024-10-20T21:00:00",
+    "competition": "Match Amical",
+    "stade": "Stade Grand Stade de Tanger",
+    "ville": "Tanger",
+    "statut": "termine",
+    "score": {
+      "equipeA": 1,
+      "equipeB": 2
+    },
+    "buteurs": [
+      { "joueur": "Ziyech", "minute": 34, "equipe": "MAR" },
+      { "joueur": "Neymar", "minute": 56, "equipe": "BRA" },
+      { "joueur": "Vinícius Jr.", "minute": 78, "equipe": "BRA" }
+    ]
+  },
+  {
+    "id": 7,
+    "equipeA": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Liberia",
+      "code": "LBR",
+      "drapeau": "/images/drapeaux/liberia.svg"
+    },
+    "date": "2024-10-12T20:00:00",
+    "competition": "CAN 2024 - Qualifications",
+    "stade": "Stade Prince Moulay Abdellah",
+    "ville": "Rabat",
+    "statut": "termine",
+    "score": {
+      "equipeA": 3,
+      "equipeB": 0
+    },
+    "buteurs": [
+      { "joueur": "En-Nesyri", "minute": 12, "equipe": "MAR" },
+      { "joueur": "Ounahi", "minute": 45, "equipe": "MAR" },
+      { "joueur": "Ziyech", "minute": 67, "equipe": "MAR" }
+    ]
+  },
+  {
+    "id": 8,
+    "equipeA": {
+      "nom": "Zambie",
+      "code": "ZAM",
+      "drapeau": "/images/drapeaux/zambie.svg"
+    },
+    "equipeB": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "date": "2024-09-09T17:00:00",
+    "competition": "CAN 2024 - Qualifications",
+    "stade": "Levy Mwanawasa Stadium",
+    "ville": "Ndola",
+    "statut": "termine",
+    "score": {
+      "equipeA": 0,
+      "equipeB": 2
+    },
+    "buteurs": [
+      { "joueur": "Hakimi", "minute": 23, "equipe": "MAR" },
+      { "joueur": "Amallah", "minute": 88, "equipe": "MAR" }
+    ]
+  },
+  {
+    "id": 9,
+    "equipeA": {
+      "nom": "Maroc Féminin",
+      "code": "MAR-F",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Zimbabwe Féminin",
+      "code": "ZIM-F",
+      "drapeau": "/images/drapeaux/zimbabwe.svg"
+    },
+    "date": "2024-11-10T16:00:00",
+    "competition": "Qualifications Coupe du Monde Féminine",
+    "stade": "Complexe Mohammed V",
+    "ville": "Casablanca",
+    "statut": "termine",
+    "score": {
+      "equipeA": 3,
+      "equipeB": 1
+    },
+    "buteurs": [
+      { "joueur": "Tagnaout", "minute": 12, "equipe": "MAR-F" },
+      { "joueur": "Chebbak", "minute": 34, "equipe": "MAR-F" },
+      { "joueur": "Ayane", "minute": 78, "equipe": "MAR-F" },
+      { "joueur": "Msipa", "minute": 56, "equipe": "ZIM-F" }
+    ]
+  },
+  {
+    "id": 10,
+    "equipeA": {
+      "nom": "Maroc U23",
+      "code": "MAR-U23",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Sénégal U23",
+      "code": "SEN-U23",
+      "drapeau": "/images/drapeaux/senegal.svg"
+    },
+    "date": "2024-11-05T19:00:00",
+    "competition": "Qualifications JO 2024",
+    "stade": "Stade Larbi Zaouli",
+    "ville": "Casablanca",
+    "statut": "termine",
+    "score": {
+      "equipeA": 1,
+      "equipeB": 1
+    },
+    "buteurs": [
+      { "joueur": "Richardson", "minute": 56, "equipe": "MAR-U23" },
+      { "joueur": "Diallo", "minute": 67, "equipe": "SEN-U23" }
+    ]
+  },
+  {
+    "id": 11,
+    "equipeA": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "equipeB": {
+      "nom": "Cameroun",
+      "code": "CMR",
+      "drapeau": "/images/drapeaux/cameroun.svg"
+    },
+    "date": "2025-01-13T21:00:00",
+    "competition": "CAN 2024 - Phase de groupes",
+    "stade": "Stade Félix Houphouët-Boigny",
+    "ville": "Abidjan",
+    "statut": "a_venir"
+  },
+  {
+    "id": 12,
+    "equipeA": {
+      "nom": "Ghana",
+      "code": "GHA",
+      "drapeau": "/images/drapeaux/ghana.svg"
+    },
+    "equipeB": {
+      "nom": "Maroc",
+      "code": "MAR",
+      "drapeau": "/images/drapeaux/maroc.svg"
+    },
+    "date": "2025-01-17T18:00:00",
+    "competition": "CAN 2024 - Phase de groupes",
+    "stade": "Stade de la Paix",
+    "ville": "Bouaké",
+    "statut": "a_venir"
+  }
+]
+

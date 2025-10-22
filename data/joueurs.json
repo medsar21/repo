@@ -1,0 +1,253 @@
+[
+  {
+    "id": "hakimi",
+    "nom": "Achraf Hakimi",
+    "prenom": "Achraf",
+    "numero": 2,
+    "poste": "Défenseur",
+    "dateNaissance": "1998-11-04",
+    "lieuNaissance": "Madrid, Espagne",
+    "taille": 181,
+    "poids": 73,
+    "club": "Paris Saint-Germain",
+    "ligue": "Ligue 1",
+    "photo": "/images/placeholder.svg?player=hakimi.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Né à Madrid de parents marocains, Achraf Hakimi est l'un des meilleurs latéraux au monde. Formé au Real Madrid, il a rapidement émergé comme un joueur clé du Maroc.",
+    "stats": {
+      "selections": 68,
+      "buts": 9,
+      "passeDecisives": 14,
+      "cartonJaunes": 12,
+      "cartonRouges": 0
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022",
+      "Champion Ligue 1 2023, 2024",
+      "Champion Serie A 2021"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@achrafhakimi",
+      "twitter": "@AchrafHakimi"
+    }
+  },
+  {
+    "id": "ziyech",
+    "nom": "Hakim Ziyech",
+    "prenom": "Hakim",
+    "numero": 7,
+    "poste": "Milieu offensif",
+    "dateNaissance": "1993-03-19",
+    "lieuNaissance": "Dronten, Pays-Bas",
+    "taille": 180,
+    "poids": 70,
+    "club": "Galatasaray",
+    "ligue": "Süper Lig",
+    "photo": "/images/placeholder.svg?player=ziyech.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Magicien du ballon, Hakim Ziyech est connu pour sa vision de jeu exceptionnelle et ses passes décisives. Il a brillé à l'Ajax avant de rejoindre Chelsea puis Galatasaray.",
+    "stats": {
+      "selections": 52,
+      "buts": 19,
+      "passeDecisives": 23,
+      "cartonJaunes": 8,
+      "cartonRouges": 1
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022",
+      "Vainqueur Ligue des Champions 2021",
+      "Champion Pays-Bas 2019, 2021"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@hziyech",
+      "twitter": "@HakimZiyech"
+    }
+  },
+  {
+    "id": "mazraoui",
+    "nom": "Noussair Mazraoui",
+    "prenom": "Noussair",
+    "numero": 3,
+    "poste": "Défenseur",
+    "dateNaissance": "1997-11-14",
+    "lieuNaissance": "Leiderdorp, Pays-Bas",
+    "taille": 183,
+    "poids": 77,
+    "club": "Manchester United",
+    "ligue": "Premier League",
+    "photo": "/images/placeholder.svg?player=mazraoui.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Défenseur polyvalent, Noussair Mazraoui s'est fait connaître à l'Ajax Amsterdam avant de rejoindre le Bayern Munich puis Manchester United.",
+    "stats": {
+      "selections": 34,
+      "buts": 2,
+      "passeDecisives": 5,
+      "cartonJaunes": 6,
+      "cartonRouges": 0
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022",
+      "Champion Bundesliga 2023"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@nmazraoui",
+      "twitter": "@Nouzair_10"
+    }
+  },
+  {
+    "id": "amrabat",
+    "nom": "Sofyan Amrabat",
+    "prenom": "Sofyan",
+    "numero": 4,
+    "poste": "Milieu défensif",
+    "dateNaissance": "1996-08-21",
+    "lieuNaissance": "Huizen, Pays-Bas",
+    "taille": 185,
+    "poids": 78,
+    "club": "Fiorentina",
+    "ligue": "Serie A",
+    "photo": "/images/placeholder.svg?player=amrabat.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Véritable métronome au milieu de terrain, Sofyan Amrabat a été l'un des meilleurs joueurs de la Coupe du Monde 2022.",
+    "stats": {
+      "selections": 60,
+      "buts": 3,
+      "passeDecisives": 4,
+      "cartonJaunes": 18,
+      "cartonRouges": 1
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022",
+      "Finaliste Conference League 2023"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@sofyanamrabat",
+      "twitter": "@SofyanAmrabat"
+    }
+  },
+  {
+    "id": "bounou",
+    "nom": "Yassine Bounou",
+    "prenom": "Yassine",
+    "numero": 1,
+    "poste": "Gardien",
+    "dateNaissance": "1991-04-05",
+    "lieuNaissance": "Montréal, Canada",
+    "taille": 192,
+    "poids": 82,
+    "club": "Al Hilal",
+    "ligue": "Saudi Pro League",
+    "photo": "/images/placeholder.svg?player=bounou.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Surnommé 'Bono', Yassine Bounou est l'un des meilleurs gardiens africains. Héros de la Coupe du Monde 2022.",
+    "stats": {
+      "selections": 64,
+      "butsEncaisses": 58,
+      "matchsSansBut": 28,
+      "arretsDeterminants": 142,
+      "cartonJaunes": 3,
+      "cartonRouges": 0
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022",
+      "Vainqueur Europa League 2023",
+      "Prix Zamora 2022"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@bounou_official",
+      "twitter": "@Yassine_Bounou"
+    }
+  },
+  {
+    "id": "en-nesyri",
+    "nom": "Youssef En-Nesyri",
+    "prenom": "Youssef",
+    "numero": 19,
+    "poste": "Attaquant",
+    "dateNaissance": "1997-06-01",
+    "lieuNaissance": "Fès, Maroc",
+    "taille": 189,
+    "poids": 82,
+    "club": "Fenerbahçe",
+    "ligue": "Süper Lig",
+    "photo": "/images/placeholder.svg?player=en-nesyri.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Avant-centre puissant et prolifique, Youssef En-Nesyri est un buteur redoutable en sélection comme en club.",
+    "stats": {
+      "selections": 59,
+      "buts": 22,
+      "passeDecisives": 8,
+      "cartonJaunes": 7,
+      "cartonRouges": 0
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022",
+      "Meilleur buteur Liga 2020-2021 (avec Sevilla)"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@youssef_en_nesyri",
+      "twitter": "@EnNesyri19"
+    }
+  },
+  {
+    "id": "ounahi",
+    "nom": "Azzedine Ounahi",
+    "prenom": "Azzedine",
+    "numero": 8,
+    "poste": "Milieu",
+    "dateNaissance": "2000-04-19",
+    "lieuNaissance": "Casablanca, Maroc",
+    "taille": 178,
+    "poids": 72,
+    "club": "Olympique de Marseille",
+    "ligue": "Ligue 1",
+    "photo": "/images/placeholder.svg?player=ounahi.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Jeune talent prometteur, Azzedine Ounahi a explosé lors de la Coupe du Monde 2022 avec des performances remarquables.",
+    "stats": {
+      "selections": 24,
+      "buts": 2,
+      "passeDecisives": 6,
+      "cartonJaunes": 4,
+      "cartonRouges": 0
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@azzedine_ounahi",
+      "twitter": "@AzzedineOunahi"
+    }
+  },
+  {
+    "id": "amallah",
+    "nom": "Selim Amallah",
+    "prenom": "Selim",
+    "numero": 15,
+    "poste": "Milieu offensif",
+    "dateNaissance": "1996-11-15",
+    "lieuNaissance": "Bruxelles, Belgique",
+    "taille": 175,
+    "poids": 69,
+    "club": "Valencia CF",
+    "ligue": "La Liga",
+    "photo": "/images/placeholder.svg?player=amallah.jpg",
+    "equipe": "equipe-a",
+    "biographie": "Milieu technique et créatif, Selim Amallah apporte sa vision de jeu et sa qualité technique à l'équipe nationale.",
+    "stats": {
+      "selections": 37,
+      "buts": 5,
+      "passeDecisives": 9,
+      "cartonJaunes": 6,
+      "cartonRouges": 0
+    },
+    "palmares": [
+      "Demi-finaliste Coupe du Monde 2022"
+    ],
+    "reseauxSociaux": {
+      "instagram": "@selim_amallah",
+      "twitter": "@AmallahSelim"
+    }
+  }
+]
+

@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Home",
+    "teams": "Teams",
+    "team": "Team",
+    "players": "Players",
+    "news": "News",
+    "calendar": "Calendar",
+    "tickets": "Tickets",
+    "shop": "Shop",
+    "club": "The Club",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read more",
+    "seeAll": "See all",
+    "discover": "Discover",
+    "buy": "Buy",
+    "addToCart": "Add to cart",
+    "learnMore": "Learn more",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "close": "Close",
+    "menu": "Menu"
+  },
+  "home": {
+    "heroTitle": "The Atlas Lions",
+    "heroSubtitle": "Proud representatives of the Kingdom of Morocco",
+    "heroCta": "Discover",
+    "latestNews": "Latest News",
+    "upcomingMatches": "Upcoming Matches",
+    "featuredPlayers": "Featured Players"
+  },
+  "teams": {
+    "title": "Our Teams",
+    "subtitle": "Discover all of Morocco's national teams",
+    "masculine": "Men's Team",
+    "feminine": "Women's Team",
+    "u23": "U23 Team",
+    "manager": "Manager",
+    "squad": "Squad",
+    "honors": "Honors",
+    "stats": "Statistics"
+  },
+  "players": {
+    "position": "Position",
+    "birthDate": "Birth date",
+    "birthPlace": "Birth place",
+    "height": "Height",
+    "weight": "Weight",
+    "club": "Club",
+    "number": "Number",
+    "caps": "Caps",
+    "goals": "Goals",
+    "assists": "Assists",
+    "biography": "Biography",
+    "statistics": "Statistics",
+    "honors": "Honors"
+  },
+  "news": {
+    "title": "News",
+    "latest": "Latest news",
+    "category": "Category",
+    "author": "Author",
+    "publishedOn": "Published on",
+    "tags": "Tags",
+    "relatedArticles": "Related articles"
+  },
+  "calendar": {
+    "title": "Calendar",
+    "upcoming": "Upcoming matches",
+    "results": "Results",
+    "competition": "Competition",
+    "stadium": "Stadium",
+    "city": "City",
+    "date": "Date",
+    "time": "Time",
+    "tv": "TV broadcast",
+    "scorers": "Scorers",
+    "matchCenter": "Match center"
+  },
+  "tickets": {
+    "title": "Tickets",
+    "subtitle": "Book your seats to follow the Atlas Lions",
+    "buyTickets": "Buy tickets",
+    "pricing": "Pricing",
+    "info": "Practical information",
+    "packages": "Supporter packages"
+  },
+  "shop": {
+    "title": "Official Shop",
+    "subtitle": "Official products of the national team",
+    "categories": "Categories",
+    "newProducts": "New products",
+    "price": "Price",
+    "size": "Size",
+    "color": "Color",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "features": "Features",
+    "description": "Description"
+  },
+  "club": {
+    "title": "The Club",
+    "about": "About",
+    "history": "History",
+    "partners": "Partners",
+    "values": "Our values",
+    "mission": "Our mission"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? Don't hesitate to contact us",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "address": "Address",
+    "phone": "Phone",
+    "followUs": "Follow us"
+  },
+  "footer": {
+    "dimaMaghreb": "Dima Maghreb",
+    "slogan": "Always Morocco",
+    "rights": "Royal Moroccan Football Federation - All rights reserved",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "newsletter": "Subscribe to our newsletter",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe"
+  }
+}
+
