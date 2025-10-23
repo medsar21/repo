@@ -122,9 +122,7 @@ export default function CalendrierPage() {
                           stade={match.stade}
                           ville={match.ville}
                           statut={match.statut}
-                          scoreA={match.scoreA}
-                          scoreB={match.scoreB}
-                          television={match.television}
+                          score={match.score}
                         />
                       </div>
                     ))}

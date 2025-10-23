@@ -19,9 +19,10 @@ export default function BoutiquePage() {
 
   const categories = [
     { id: 'all', label: 'Tous les produits' },
-    { id: 'maillots', label: 'Maillots' },
-    { id: 'accessoires', label: 'Accessoires' },
-    { id: 'equipement', label: 'Équipement' },
+    { id: 'Maillots', label: 'Maillots' },
+    { id: 'Accessoires', label: 'Accessoires' },
+    { id: 'Équipement', label: 'Équipement' },
+    { id: 'Vêtements', label: 'Vêtements' },
   ];
 
   const filteredProduits = selectedCategory === 'all'
@@ -106,12 +107,12 @@ export default function BoutiquePage() {
                   {/* Image */}
                   <div className="relative h-64 bg-gray-100 overflow-hidden">
                     <Image
-                      src={produit.image}
+                      src={produit.images[0]}
                       alt={produit.nom}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    {produit.nouveau && (
+                    {produit.nouveaute && (
                       <div className="absolute top-4 left-4 px-3 py-1 bg-maroc-red text-white text-xs font-bold uppercase rounded-full">
                         Nouveau
                       </div>
@@ -126,8 +127,8 @@ export default function BoutiquePage() {
                     
                     {/* Price */}
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-bold text-maroc-green">{produit.prix} DH</span>
-                      {produit.disponible && (
+                      <span className="text-2xl font-bold text-maroc-green">{produit.prix} {produit.devise}</span>
+                      {produit.enStock && (
                         <span className="text-xs text-green-600 font-semibold">En stock</span>
                       )}
                     </div>

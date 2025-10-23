@@ -368,7 +368,6 @@ export default function HomePage() {
                   stade={match.stade}
                   ville={match.ville}
                   statut={match.statut}
-                  television={match.television}
                 />
                 </div>
               ))}
@@ -585,16 +584,28 @@ export default function HomePage() {
                       <div
                         key={`partner-${index}`}
                         className="flex-shrink-0 w-72 h-44 mx-6 md:mx-8 flex items-center justify-center group cursor-pointer"
+                        style={{ perspective: '1000px' }}
                       >
-                        {/* Logo - Noir & blanc au repos, couleur au hover */}
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={partner.image}
-                            alt={partner.name}
-                            fill
-                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                            sizes="288px"
-                          />
+                        {/* Carte avec bordure dorée et effet 3D */}
+                        <div 
+                          className="relative w-full h-full rounded-2xl p-6 partner-card-3d"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%)',
+                            border: '3px solid',
+                            borderImage: 'linear-gradient(135deg, #D4AF37, #FFD700, #B8860B, #D4AF37) 1',
+                            transformStyle: 'preserve-3d',
+                          }}
+                        >
+                          {/* Logo - Noir & blanc au repos, couleur au hover */}
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={partner.image}
+                              alt={partner.name}
+                              fill
+                              className="object-contain grayscale group-hover:grayscale-0 transition-all duration-700"
+                              sizes="288px"
+                            />
+                          </div>
                         </div>
                       </div>
                     ))}
@@ -612,20 +623,32 @@ export default function HomePage() {
                       <div
                         key={`partner-duplicate-${index}`}
                         className="flex-shrink-0 w-72 h-44 mx-6 md:mx-8 flex items-center justify-center group cursor-pointer"
+                        style={{ perspective: '1000px' }}
                       >
-                        {/* Logo - Noir & blanc au repos, couleur au hover */}
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={partner.image}
-                            alt={partner.name}
-                            fill
-                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
-                            sizes="288px"
-                          />
+                        {/* Carte avec bordure dorée et effet 3D */}
+                        <div 
+                          className="relative w-full h-full rounded-2xl p-6 partner-card-3d"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%)',
+                            border: '3px solid',
+                            borderImage: 'linear-gradient(135deg, #D4AF37, #FFD700, #B8860B, #D4AF37) 1',
+                            transformStyle: 'preserve-3d',
+                          }}
+                        >
+                          {/* Logo - Noir & blanc au repos, couleur au hover */}
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={partner.image}
+                              alt={partner.name}
+                              fill
+                              className="object-contain grayscale group-hover:grayscale-0 transition-all duration-700"
+                              sizes="288px"
+                            />
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                </div>
+              ))}
+            </div>
                 </div>
               </div>
 
