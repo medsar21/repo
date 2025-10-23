@@ -376,8 +376,24 @@ export default function HomePage() {
         </section>
 
         {/* Section Joueurs Vedettes */}
-        <section className="relative pt-8 md:pt-12 pb-16 md:pb-24 bg-maroc-dark text-white">
-          <div className="container-custom">
+        <section className="relative pt-8 md:pt-12 pb-16 md:pb-24 text-white overflow-hidden">
+          {/* Background Image - Montakhab */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/montakhab.webp"
+              alt="Équipe Nationale du Maroc - Montakhab"
+              fill
+              className="object-cover object-center"
+              priority={false}
+              quality={90}
+            />
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-maroc-dark/95 via-maroc-dark/85 to-maroc-dark/95" />
+            {/* Additional gradient overlays for depth */}
+            <div className="absolute inset-0 bg-gradient-to-r from-maroc-green/20 via-transparent to-maroc-red/20" />
+          </div>
+
+          <div className="container-custom relative z-10">
             <h2 className="section-title text-white">Joueurs Vedettes</h2>
             <p className="section-subtitle text-gray-300">
               Découvrez les stars qui portent fièrement le maillot national
