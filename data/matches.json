@@ -31,38 +31,60 @@
     "equipeA": {
       "nom": "Tanzanie",
       "code": "TAN",
-      "drapeau": "/images/drapeaux/tanzanie.svg"
+      "drapeau": "/images/drapeaux/tanzanie.svg",
+      "points": 6,
+      "position": 3
     },
     "equipeB": {
       "nom": "Maroc",
       "code": "MAR",
-      "drapeau": "/images/drapeaux/maroc.svg"
+      "drapeau": "/images/drapeaux/maroc.svg",
+      "points": 12,
+      "position": 1
     },
     "date": "2024-11-22T18:00:00",
     "competition": "CAN 2024 - Qualifications",
     "stade": "Benjamin Mkapa Stadium",
     "ville": "Dar es Salaam",
     "statut": "a_venir",
-    "television": "beIN Sports"
+    "television": "beIN Sports",
+    "isQualification": true,
+    "groupStandings": [
+      { "position": 1, "team": "Maroc", "played": 4, "won": 4, "drawn": 0, "lost": 0, "points": 12 },
+      { "position": 2, "team": "Égypte", "played": 4, "won": 2, "drawn": 1, "lost": 1, "points": 7 },
+      { "position": 3, "team": "Tanzanie", "played": 4, "won": 2, "drawn": 0, "lost": 2, "points": 6 },
+      { "position": 4, "team": "Lesotho", "played": 4, "won": 0, "drawn": 1, "lost": 3, "points": 1 }
+    ]
   },
   {
     "id": 3,
     "equipeA": {
       "nom": "Maroc",
       "code": "MAR",
-      "drapeau": "/images/drapeaux/maroc.svg"
+      "drapeau": "/images/drapeaux/maroc.svg",
+      "points": 12,
+      "position": 1
     },
     "equipeB": {
       "nom": "Égypte",
       "code": "EGY",
-      "drapeau": "/images/drapeaux/egypte.svg"
+      "drapeau": "/images/drapeaux/egypte.svg",
+      "points": 7,
+      "position": 2
     },
     "date": "2024-11-26T21:00:00",
     "competition": "CAN 2024 - Qualifications",
     "stade": "Stade Mohammed V",
     "ville": "Casablanca",
     "statut": "a_venir",
-    "television": "beIN Sports, Al Aoula"
+    "television": "beIN Sports, Al Aoula",
+    "isQualification": true,
+    "groupStandings": [
+      { "position": 1, "team": "Maroc", "played": 4, "won": 4, "drawn": 0, "lost": 0, "points": 12 },
+      { "position": 2, "team": "Égypte", "played": 4, "won": 2, "drawn": 1, "lost": 1, "points": 7 },
+      { "position": 3, "team": "Tanzanie", "played": 4, "won": 2, "drawn": 0, "lost": 2, "points": 6 },
+      { "position": 4, "team": "Lesotho", "played": 4, "won": 0, "drawn": 1, "lost": 3, "points": 1 }
+    ]
   },
   {
     "id": 4,
@@ -81,7 +103,8 @@
     "stade": "Estadio Santiago Bernabéu",
     "ville": "Madrid",
     "statut": "a_venir",
-    "television": "beIN Sports"
+    "television": "beIN Sports",
+    "isQualification": false
   },
   {
     "id": 5,

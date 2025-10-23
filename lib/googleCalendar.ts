@@ -41,11 +41,17 @@ interface Match {
   competition: string;
   stade?: string;
   ville?: string;
-  statut: 'termine' | 'a_venir';
+  statut: 'termine' | 'a_venir' | string;
   score?: {
     equipeA: number;
     equipeB: number;
   };
+  buteurs?: Array<{
+    joueur: string;
+    minute: number;
+    equipe: string;
+  }>;
+  television?: string;
 }
 
 /**

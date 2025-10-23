@@ -18,8 +18,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-chivo)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-chivo-mono)', 'system-ui', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
       },
       backgroundImage: {
         'gradient-maroc': 'linear-gradient(135deg, #C1272D 0%, #006233 100%)',

@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 
 /**
- * MatchCard Component
+ * MatchCard Component - Premium Design
  * 
- * Carte affichant les informations d'un match
+ * Carte affichant les informations d'un match avec animation moderne
  */
 
 interface MatchCardProps {
@@ -22,7 +22,7 @@ interface MatchCardProps {
   competition: string;
   stade?: string;
   ville?: string;
-  statut: 'a_venir' | 'en_cours' | 'termine';
+  statut: 'a_venir' | 'en_cours' | 'termine' | string;
   score?: {
     equipeA: number;
     equipeB: number;
@@ -48,73 +48,115 @@ const MatchCard: React.FC<MatchCardProps> = ({
 
   return (
     <div
-      className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
-        isMarocMatch ? 'ring-2 ring-maroc-red' : ''
-      }`}
+      className="group relative bg-white rounded-2xl overflow-hidden transition-all duration-700 hover:shadow-[0_20px_60px_-15px_rgba(193,39,45,0.4)] transform hover:-translate-y-3 hover:scale-[1.02]"
+      style={{
+        boxShadow: '0 10px 40px -10px rgba(0,0,0,0.1)',
+        transition: 'all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)',
+      }}
     >
-      {/* En-tête */}
-      <div className="bg-gradient-to-r from-maroc-red to-maroc-green p-4">
-        <div className="flex items-center justify-between text-white">
-          <span className="text-xs font-bold uppercase tracking-wide">
+      {/* Decorative gradient bar - animated on hover */}
+      <div 
+        className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-maroc-red via-maroc-gold to-maroc-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
+      />
+
+      {/* En-tête avec glassmorphism effect */}
+      <div className="relative bg-gradient-to-br from-maroc-red/5 via-transparent to-maroc-green/5 backdrop-blur-sm px-6 pt-6 pb-4">
+        <div className="flex items-center justify-between">
+          <span 
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-maroc-red to-red-600 text-white text-xs font-bold uppercase tracking-widest rounded-full shadow-lg"
+            style={{
+              boxShadow: '0 4px 15px rgba(193, 39, 45, 0.4)',
+            }}
+          >
+            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+            </svg>
             {competition}
           </span>
+          
           {statut === 'en_cours' && (
-            <span className="flex items-center gap-1 text-xs font-bold animate-pulse">
-              <span className="w-2 h-2 bg-white rounded-full"></span>
-              EN DIRECT
+            <span className="flex items-center gap-2 px-3 py-1.5 bg-red-500 text-white text-xs font-bold rounded-full animate-pulse shadow-lg">
+              <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+              <span className="relative">EN DIRECT</span>
             </span>
+          )}
+
+          {statut === 'a_venir' && (
+            <div className="flex items-center gap-2 text-maroc-green">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
           )}
         </div>
       </div>
 
-      {/* Équipes et Score */}
-      <div className="p-6">
-        <div className="flex items-center justify-between gap-4">
+      {/* Équipes et Score - Design moderne */}
+      <div className="px-6 py-8">
+        <div className="flex items-center justify-between gap-6">
           {/* Équipe A */}
-          <div className="flex-1 flex flex-col items-center text-center">
-            <div className="relative w-16 h-16 mb-3">
+          <div className="flex-1 flex flex-col items-center text-center group/team">
+            <div 
+              className="relative w-20 h-20 mb-4 rounded-full p-3 bg-gradient-to-br from-gray-50 to-white shadow-lg transform transition-all duration-500 group-hover/team:scale-110 group-hover/team:rotate-6"
+              style={{
+                boxShadow: '0 10px 30px -10px rgba(0,0,0,0.2)',
+              }}
+            >
               <Image
                 src={equipeA.drapeau}
                 alt={equipeA.nom}
                 fill
-                className="object-contain"
+                className="object-contain p-2"
               />
             </div>
-            <h3 className="font-bold text-maroc-dark text-sm">
+            <h3 className="font-heading font-bold text-gray-900 text-base mb-1 transition-colors duration-300 group-hover/team:text-maroc-red">
               {equipeA.nom}
             </h3>
-            <span className="text-xs text-gray-500 uppercase">
+            <span className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase rounded-full">
               {equipeA.code}
             </span>
           </div>
 
-          {/* Score ou VS */}
+          {/* Score ou VS - Centre avec design élégant */}
           <div className="flex flex-col items-center">
             {statut === 'termine' && score ? (
-              <div className="flex items-center gap-4">
-                <span className="text-4xl font-heading font-black text-maroc-dark">
+              <div className="flex items-center gap-5">
+                <span className="text-5xl font-playfair italic font-bold text-maroc-red">
                   {score.equipeA}
                 </span>
-                <span className="text-2xl font-bold text-gray-400">-</span>
-                <span className="text-4xl font-heading font-black text-maroc-dark">
+                <div className="flex flex-col items-center">
+                  <span className="text-2xl font-bold text-gray-300">—</span>
+                  <span className="text-xs font-bold text-gray-400 uppercase mt-1">Final</span>
+                </div>
+                <span className="text-5xl font-playfair italic font-bold text-maroc-red">
                   {score.equipeB}
                 </span>
               </div>
             ) : (
-              <div className="text-2xl font-heading font-black text-maroc-gold">
-                VS
+              <div className="relative">
+                <div 
+                  className="w-16 h-16 rounded-full bg-gradient-to-br from-maroc-gold to-yellow-600 flex items-center justify-center shadow-xl transform group-hover:rotate-180 transition-transform duration-700"
+                  style={{
+                    boxShadow: '0 10px 40px -10px rgba(212, 175, 55, 0.6)',
+                  }}
+                >
+                  <span className="text-2xl font-playfair italic font-black text-white">VS</span>
+                </div>
               </div>
             )}
             
             {statut === 'a_venir' && (
-              <div className="mt-2 text-center">
-                <p className="text-sm font-semibold text-gray-700">
+              <div className="mt-4 text-center px-4 py-2 bg-gradient-to-r from-maroc-green/10 to-maroc-green/5 rounded-xl border border-maroc-green/20">
+                <p className="text-sm font-bold text-maroc-green flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
                   {matchDate.toLocaleDateString('fr-FR', {
                     day: 'numeric',
-                    month: 'short',
+                    month: 'long',
                   })}
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-lg font-playfair italic font-bold text-gray-700 mt-1">
                   {matchDate.toLocaleTimeString('fr-FR', {
                     hour: '2-digit',
                     minute: '2-digit',
@@ -125,54 +167,79 @@ const MatchCard: React.FC<MatchCardProps> = ({
           </div>
 
           {/* Équipe B */}
-          <div className="flex-1 flex flex-col items-center text-center">
-            <div className="relative w-16 h-16 mb-3">
+          <div className="flex-1 flex flex-col items-center text-center group/team">
+            <div 
+              className="relative w-20 h-20 mb-4 rounded-full p-3 bg-gradient-to-br from-gray-50 to-white shadow-lg transform transition-all duration-500 group-hover/team:scale-110 group-hover/team:-rotate-6"
+              style={{
+                boxShadow: '0 10px 30px -10px rgba(0,0,0,0.2)',
+              }}
+            >
               <Image
                 src={equipeB.drapeau}
                 alt={equipeB.nom}
                 fill
-                className="object-contain"
+                className="object-contain p-2"
               />
             </div>
-            <h3 className="font-bold text-maroc-dark text-sm">
+            <h3 className="font-heading font-bold text-gray-900 text-base mb-1 transition-colors duration-300 group-hover/team:text-maroc-red">
               {equipeB.nom}
             </h3>
-            <span className="text-xs text-gray-500 uppercase">
+            <span className="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold uppercase rounded-full">
               {equipeB.code}
             </span>
           </div>
         </div>
 
-        {/* Informations supplémentaires */}
+        {/* Informations supplémentaires - Design Premium */}
         {(stade || television) && (
-          <div className="mt-6 pt-4 border-t border-gray-200 space-y-2">
+          <div className="mt-8 pt-6 border-t border-gray-100 space-y-3">
             {stade && ville && (
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="truncate">
-                  {stade}, {ville}
-                </span>
+              <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-gray-50 to-white rounded-xl border border-gray-100 group/info hover:border-maroc-green transition-all duration-300">
+                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-maroc-green to-green-600 rounded-full flex items-center justify-center shadow-md group-hover/info:scale-110 transition-transform duration-300">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5">Stade</p>
+                  <p className="text-sm font-bold text-gray-900 truncate">
+                    {stade}, <span className="text-maroc-green">{ville}</span>
+                  </p>
+                </div>
               </div>
             )}
             
             {television && (
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                <span className="truncate">{television}</span>
+              <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-blue-50 to-white rounded-xl border border-blue-100 group/info hover:border-blue-400 transition-all duration-300">
+                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md group-hover/info:scale-110 transition-transform duration-300">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5">Diffusion</p>
+                  <p className="text-sm font-bold text-gray-900 truncate">{television}</p>
+                </div>
               </div>
             )}
           </div>
         )}
 
-        {/* Bouton CTA */}
+        {/* Bouton CTA - Design moderne avec animation */}
         {statut !== 'termine' && (
-          <button className="mt-4 w-full btn-outline text-sm py-2">
-            {statut === 'en_cours' ? 'Suivre le match' : 'Match Center'}
+          <button 
+            className="mt-6 w-full bg-gradient-to-r from-maroc-red to-red-600 hover:from-maroc-red hover:to-maroc-red text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-500 flex items-center justify-center gap-3 group/btn"
+            style={{
+              boxShadow: '0 10px 30px -10px rgba(193, 39, 45, 0.4)',
+            }}
+          >
+            <span className="text-base">
+              {statut === 'en_cours' ? 'Suivre le match en direct' : 'Plus d\'infos'}
+            </span>
+            <svg className="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </button>
         )}
       </div>

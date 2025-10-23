@@ -17,7 +17,7 @@ interface HeroProps {
   ctaLink?: string;
   backgroundImage?: string;
   backgroundVideo?: string;
-  height?: 'small' | 'medium' | 'large' | 'full';
+  height?: 'small' | 'medium' | 'large' | 'full' | 'extended';
   overlay?: 'light' | 'medium' | 'dark';
 }
 
@@ -37,6 +37,7 @@ const Hero: React.FC<HeroProps> = ({
     medium: 'h-[60vh]',
     large: 'h-[80vh]',
     full: 'h-screen',
+    extended: 'h-[120vh]',
   };
 
   const overlayClasses = {
@@ -46,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <div className={`relative ${heightClasses[height]} flex items-center justify-center overflow-hidden`}>
+    <div className={`relative ${heightClasses[height]} flex items-end justify-center overflow-hidden pb-20 md:pb-24 lg:pb-32`}>
       {/* Vidéo de fond (prioritaire si fournie) */}
       {backgroundVideo ? (
         <video
@@ -71,19 +72,18 @@ const Hero: React.FC<HeroProps> = ({
       ) : null}
 
           {/* Overlay gradient - Transition vers le calendrier */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
           
-          {/* Gradient de transition vers la section suivante */}
+          {/* Gradient de transition vers la section suivante - Transition to white */}
           <div 
             className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none"
             style={{
               background: `
                 linear-gradient(to bottom,
                   transparent 0%,
-                  rgba(0, 0, 0, 0.3) 20%,
-                  rgba(0, 98, 51, 0.4) 50%,
-                  rgba(0, 98, 51, 0.7) 75%,
-                  rgba(10, 14, 21, 0.95) 100%
+                  rgba(0, 0, 0, 0.2) 25%,
+                  rgba(249, 250, 251, 0.5) 70%,
+                  rgba(249, 250, 251, 1) 100%
                 )
               `
             }}
@@ -91,19 +91,19 @@ const Hero: React.FC<HeroProps> = ({
 
       {/* Contenu - Aligné à gauche avec animation depuis la droite */}
       <div className="relative z-10 w-full text-white pl-6 md:pl-12 lg:pl-16 pr-6">
-        <div className="max-w-4xl">
+        <div className="max-w-3xl">
           {subtitle && (
-            <p className="text-maroc-gold font-bold uppercase tracking-widest text-xs md:text-sm mb-4 animate-slide-in-right">
+            <p className="font-playfair italic text-maroc-gold font-semibold tracking-wide text-sm md:text-base lg:text-lg mb-4 animate-slide-in-right drop-shadow-lg" style={{ letterSpacing: '0.05em' }}>
               {subtitle}
             </p>
           )}
           
-          <h1 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 leading-tight animate-slide-in-right-delay drop-shadow-2xl">
+          <h1 className="font-playfair italic font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-5 leading-[1.1] animate-slide-in-right-delay drop-shadow-2xl" style={{ fontWeight: 700 }}>
             {title}
           </h1>
 
           {description && (
-            <p className="text-base md:text-lg lg:text-xl max-w-2xl mb-8 text-white/95 animate-slide-in-right-delay-2">
+            <p className="font-playfair italic text-base md:text-lg lg:text-xl max-w-2xl mb-7 text-white/95 animate-slide-in-right-delay-2 leading-relaxed drop-shadow-lg">
               {description}
             </p>
           )}
@@ -111,7 +111,7 @@ const Hero: React.FC<HeroProps> = ({
           {ctaText && ctaLink && (
             <Link
               href={ctaLink}
-              className="inline-block btn-primary text-base md:text-lg px-8 py-4 animate-slide-in-right-delay-3 shadow-lg hover:shadow-xl transition-all"
+              className="inline-block btn-primary font-playfair italic text-sm md:text-base lg:text-lg px-7 py-3.5 animate-slide-in-right-delay-3 shadow-lg hover:shadow-xl transition-all font-semibold"
             >
               {ctaText}
             </Link>
@@ -120,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
         <svg
           className="w-6 h-6 text-white"
           fill="none"

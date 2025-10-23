@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;500;600;700;800;900&family=Chivo+Mono:wght@700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --font-inter: 'Inter', sans-serif;
-  --font-montserrat: 'Montserrat', sans-serif;
+  --font-chivo: 'Chivo', sans-serif;
+  --font-chivo-mono: 'Chivo Mono', monospace;
+  --font-playfair: 'Playfair Display', serif;
   
   /* PSG Style Variables */
   --neutral-2: 250,251,252;
@@ -97,7 +98,7 @@
 
 html {
   @apply scroll-smooth;
-  scroll-padding-top: 6rem; /* Pour compenser la navbar fixe */
+  scroll-padding-top: 5rem; /* Pour compenser la navbar fixe */
   overflow-x: hidden;
 }
 
@@ -619,4 +620,60 @@ html {
     stroke-dashoffset: 0;
   }
 }
+
+  /* News Section Animation - Slide Up with Fade */
+  @keyframes slide-in-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-slide-in-fade-up {
+    animation: slide-in-fade-up 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  /* Match Cards Animation - Slide from Bottom with Bounce */
+  @keyframes slide-up-bounce {
+    from {
+      opacity: 0;
+      transform: translateY(60px) scale(0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-8px) scale(1.02);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-slide-up-bounce {
+    animation: slide-up-bounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  /* Partners Carousel - Auto Scroll Animation */
+  @keyframes scroll-partners {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-partners {
+    animation: scroll-partners 60s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-scroll-partners:hover {
+    animation-play-state: paused;
+  }
+
 

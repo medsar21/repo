@@ -29,11 +29,17 @@ interface Match {
   competition: string;
   stade?: string;
   ville?: string;
-  statut: 'termine' | 'a_venir';
+  statut: 'termine' | 'a_venir' | string;
   score?: {
     equipeA: number;
     equipeB: number;
   };
+  buteurs?: Array<{
+    joueur: string;
+    minute: number;
+    equipe: string;
+  }>;
+  television?: string;
 }
 
 interface MatchCarouselProps {
@@ -118,61 +124,52 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
   };
 
   return (
-    <section 
-      className="relative py-20 md:py-24 -mt-32 overflow-hidden" 
-      style={{
-        background: `
-          linear-gradient(135deg, 
-            rgba(0, 98, 51, 0.95) 0%,
-            rgba(26, 35, 50, 0.98) 25%,
-            rgba(193, 39, 45, 0.15) 50%,
-            rgba(26, 35, 50, 0.98) 75%,
-            rgba(0, 98, 51, 0.95) 100%
-          ),
-          radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-          radial-gradient(circle at 80% 70%, rgba(193, 39, 45, 0.12) 0%, transparent 50%),
-          linear-gradient(180deg, rgba(10, 14, 21, 0.8) 0%, #0a0e15 15%, #141b28 100%)
-        `
-      }}
+    <section
+      className="relative pt-24 pb-12 md:pt-28 md:pb-16 -mt-20 overflow-hidden bg-gradient-to-br from-maroc-dark via-[#0a1f1a] to-maroc-green/20"
     >
-      {/* Motif géométrique subtil en arrière-plan */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px',
-        }}
-      />
-      
-      {/* Overlay dégradé pour la profondeur */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
-      
-      {/* Séparateur décoratif en haut avec effet de continuité et shimmer */}
-      <div className="absolute top-0 left-0 right-0 h-1 z-20 overflow-hidden">
-        <div 
-          className="h-full w-full gold-separator"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 15%, rgba(212, 175, 55, 0.8) 35%, rgba(255, 215, 0, 1) 50%, rgba(212, 175, 55, 0.8) 65%, rgba(212, 175, 55, 0.2) 85%, transparent 100%)',
-            boxShadow: '0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3)',
-          }}
-        />
-      </div>
-      
-      {/* Effet de lueur douce en haut */}
+      {/* Smooth transition overlay from hero */}
       <div 
         className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.15) 0%, transparent 70%)',
+          background: `
+            linear-gradient(to bottom,
+              rgba(10, 14, 21, 0.95) 0%,
+              rgba(10, 14, 21, 0.6) 30%,
+              transparent 100%
+            )
+          `,
         }}
       />
       
+      {/* Subtle overlay pour la profondeur */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
+      
+      {/* Accent glow effect */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `
+            radial-gradient(1200px 300px at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 70%)
+          `,
+        }}
+      />
+
+      {/* Logo FRMF watermark en arrière-plan */}
+      <div className="absolute top-1/2 right-8 md:right-16 -translate-y-1/2 opacity-5 pointer-events-none">
+        <img
+          src="/images/FRMF-logo.svg"
+          alt=""
+          className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80"
+          style={{ filter: 'brightness(0) invert(1)' }}
+        />
+      </div>
+      
       <div className="w-full px-0 relative z-10">
         {/* Titre PSG Style Enhanced */}
-        <div className="mb-10 px-6 md:px-8">
+        <div className="mb-6 px-6 md:px-8">
           <h2 
-            className="font-extrabold text-white inline-block relative" 
+            className="font-extrabold text-white inline-block relative text-2xl md:text-3xl" 
             style={{ 
-              fontSize: 'var(--font-size-d-headline-3)',
               fontWeight: 'var(--font-weight-extrabold)',
               letterSpacing: 'var(--letter-spacing-tight, -.025em)',
               textShadow: '0 2px 20px rgba(0, 0, 0, 0.4)',
@@ -181,9 +178,9 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
             Calendrier
             {/* Underline doré subtil */}
             <div 
-              className="absolute -bottom-2 left-0 h-0.5 rounded-full"
+              className="absolute -bottom-1.5 left-0 h-0.5 rounded-full"
               style={{
-                width: '60px',
+                width: '50px',
                 background: 'linear-gradient(90deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.3))',
                 boxShadow: '0 0 10px rgba(212, 175, 55, 0.4)',
               }}
@@ -236,7 +233,7 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
           <div className="relative">
             <div
               ref={scrollContainerRef}
-              className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide py-6 px-6 md:px-8"
+              className="flex gap-3 md:gap-4 overflow-x-auto scrollbar-hide py-4 px-6 md:px-8"
             >
               {matches.map((match, index) => {
                 const { day, month, time, full } = formatDate(match.date);
@@ -256,12 +253,12 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
                       <div className={`group relative ${match.statut === 'a_venir' ? 'cursor-pointer' : 'cursor-default'}`}>
                         {/* Carte avec coins coupés - Style PSG exact + Glassmorphism */}
                         <div 
-                          className="clip-corner p-lg lg:p-xl relative flex w-[220px] md:w-[293px] flex-col overflow-hidden backdrop-blur-sm"
+                          className="clip-corner p-4 md:p-5 relative flex w-[200px] md:w-[260px] flex-col overflow-hidden backdrop-blur-md"
                           style={{
-                            backgroundColor: 'rgba(242, 245, 248, 0.95)',
+                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
                             transition: 'all var(--duration-medium-1) var(--ease-standard)',
-                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5)',
-                            border: '1px solid rgba(255, 255, 255, 0.18)',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                            border: '1px solid rgba(255, 255, 255, 0.2)',
                           }}
                         >
                           
@@ -271,18 +268,18 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
                             loading="lazy" 
                             width="101" 
                             height="100" 
-                            className="transition-opacity duration-300 ease-in text-content-primary/5 pointer-events-none absolute -right-[5%] -bottom-[5%] h-[150px] w-[150px] opacity-5"
+                            className="transition-opacity duration-300 ease-in pointer-events-none absolute -right-[5%] -bottom-[5%] h-[150px] w-[150px] opacity-10"
                             src="/images/FRMF-logo.svg"
-                            style={{ color: 'transparent' }}
+                            style={{ color: 'transparent', filter: 'brightness(0) invert(1)' }}
                           />
 
                           {/* Contenu */}
                           <div className="gap-lg flex h-full flex-col justify-between">
                             {/* Header: Badge + Date/Statut */}
-                            <div className="typography-overline-2 gap-sm flex items-center">
+                            <div className="typography-overline-2 gap-sm flex items-center text-white">
                               <div className="gap-sm flex items-center">
                                 <span 
-                                  className="bg-background-tertiary text-white uppercase"
+                                  className="bg-maroc-green text-white uppercase"
                                   style={{
                                     paddingLeft: 'var(--px-xs)',
                                     paddingRight: 'var(--px-xs)',
@@ -292,13 +289,13 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
                                 >
                                   {teamType}
                                 </span>
-                                <div className="gap-xs flex">
+                                <div className="gap-xs flex text-white">
                                   {match.statut === 'termine' ? (
-                                    <span className="text-content-secondary">Terminé</span>
+                                    <span className="text-white/80">Terminé</span>
                                   ) : (
                                     <>
-                                      <span className="text-content-secondary">{full}</span>
-                                      <span className="text-content-black">{time}</span>
+                                      <span className="text-white/80">{full}</span>
+                                      <span className="text-white">{time}</span>
                                     </>
                                   )}
                                 </div>
@@ -319,10 +316,10 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
                                       className="h-8 w-8 object-contain"
                                     />
                                   </div>
-                                  <div className="typography-title-4 gap-sm top-0-5 relative flex h-8 items-center leading-none">
+                                  <div className="typography-title-4 gap-sm top-0-5 relative flex h-8 items-center leading-none text-white">
                                     <span>{match.equipeA.nom}</span>
                                     {match.statut === 'termine' && match.score && (
-                                      <span className="text-content-secondary ml-2">
+                                      <span className="text-white/70 ml-2">
                                         {match.score.equipeA}
                                       </span>
                                     )}
@@ -340,10 +337,10 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
                                       className="h-8 w-8 object-contain"
                                     />
                                   </div>
-                                  <div className="typography-title-4 gap-sm top-0-5 relative flex h-8 items-center leading-none">
+                                  <div className="typography-title-4 gap-sm top-0-5 relative flex h-8 items-center leading-none text-white">
                                     <span>{match.equipeB.nom}</span>
                                     {match.statut === 'termine' && match.score && (
-                                      <span className="text-content-secondary ml-2">
+                                      <span className="text-white/70 ml-2">
                                         {match.score.equipeB}
                                       </span>
                                     )}
@@ -356,7 +353,7 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
                                 {match.statut === 'a_venir' ? (
                                   <Link
                                     href={`/calendrier#match-${match.id}`}
-                                    className="typography-overline-2 gap-xs text-content-secondary hover:text-content-primary relative z-50 flex items-center"
+                                    className="typography-overline-2 gap-xs text-white/70 hover:text-white relative z-50 flex items-center"
                                     style={{
                                       transition: 'all var(--duration-medium-1) var(--ease-standard)',
                                     }}
@@ -382,7 +379,7 @@ const MatchCarousel: React.FC<MatchCarouselProps> = ({ matches }) => {
           </div>
 
           {/* Indicateur de progression - Style PSG Enhanced */}
-          <div className="mt-11 flex items-center justify-center">
+          <div className="mt-6 flex items-center justify-center">
             <div 
               className="relative h-1 w-24 self-center rounded-full overflow-hidden" 
               style={{ 

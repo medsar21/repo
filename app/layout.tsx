@@ -1,17 +1,24 @@
 import type { Metadata } from 'next'
-import { Inter, Montserrat } from 'next/font/google'
+import { Chivo, Chivo_Mono, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({
+const chivo = Chivo({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-chivo',
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const chivoMono = Chivo_Mono({
   subsets: ['latin'],
-  variable: '--font-montserrat',
-  weight: ['700', '800', '900'],
+  variable: '--font-chivo-mono',
+  weight: ['900'],
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  style: ['normal', 'italic'],
   display: 'swap',
 })
 
@@ -20,6 +27,11 @@ export const metadata: Metadata = {
   description: 'Site officiel de l\'équipe nationale de football du Maroc. Actualités, calendrier, joueurs, billetterie et boutique des Lions de l\'Atlas.',
   keywords: ['Maroc', 'Football', 'Lions de l\'Atlas', 'Équipe nationale', 'FRMF', 'CAN', 'Coupe du Monde'],
   authors: [{ name: 'FRMF' }],
+  icons: {
+    icon: '/images/FRMF-logo.svg',
+    shortcut: '/images/FRMF-logo.svg',
+    apple: '/images/FRMF-logo.svg',
+  },
   openGraph: {
     title: 'Lions de l\'Atlas - Équipe Nationale du Maroc',
     description: 'Site officiel de l\'équipe nationale de football du Maroc',
@@ -54,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${montserrat.variable}`}>
+    <html lang="fr" className={`${chivo.variable} ${chivoMono.variable} ${playfair.variable}`}>
       <body>
         {children}
       </body>
