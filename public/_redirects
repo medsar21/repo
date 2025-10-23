@@ -1,0 +1,9 @@
+# Redirections pour Next.js sur Netlify
+# Gère toutes les routes dynamiques
+
+# Routes API
+/api/*  /.netlify/functions/:splat  200
+
+# Routes statiques
+/*    /index.html   200
+

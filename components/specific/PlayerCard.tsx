@@ -31,7 +31,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({
 }) => {
   return (
     <Link
-      href={`/joueur/${id}`}
+      href={`/joueurs/${id}`}
       className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
     >
       {/* Numéro en arrière-plan */}
