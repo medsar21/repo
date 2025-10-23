@@ -48,34 +48,45 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div className={`relative ${heightClasses[height]} flex items-end justify-center overflow-hidden pb-20 md:pb-24 lg:pb-32`}>
-      {/* Image de fond pour mobile (performance optimisée) */}
-      <div className="block md:hidden absolute inset-0">
-        <Image
-          src="/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"
-          alt={title}
-          fill
-          className="object-cover brightness-90"
-          priority
-          quality={75}
-          sizes="100vw"
-        />
-      </div>
-
-      {/* Vidéo de fond pour desktop uniquement */}
-      {backgroundVideo ? (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster="/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"
-          className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
-        >
-          <source src={backgroundVideo} type="video/mp4" />
-        </video>
-      ) : backgroundImage ? (
-        /* Image de fond (fallback) */
+      {/* Background - Vidéo pour desktop, Image pour mobile */}
+      {backgroundVideo && (
+        <>
+          {/* Vidéo de fond pour desktop uniquement */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster={backgroundImage || "/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"}
+            className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110 z-0"
+            style={{ 
+              objectFit: 'cover',
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          
+          {/* Image de fond pour mobile (performance optimisée) */}
+          <div className="block md:hidden absolute inset-0 z-0">
+            <Image
+              src={backgroundImage || "/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"}
+              alt={title}
+              fill
+              className="object-cover brightness-90"
+              priority
+              quality={75}
+              sizes="100vw"
+            />
+          </div>
+        </>
+      )}
+      
+      {/* Fallback si pas de vidéo */}
+      {!backgroundVideo && backgroundImage && (
         <Image
           src={backgroundImage}
           alt={title}
@@ -84,7 +95,7 @@ const Hero: React.FC<HeroProps> = ({
           priority
           quality={90}
         />
-      ) : null}
+      )}
 
           {/* Overlay gradient - Transition vers le calendrier */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
