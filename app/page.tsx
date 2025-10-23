@@ -56,6 +56,7 @@ export default function HomePage() {
           ctaText="Découvrir l'équipe"
           ctaLink="/equipes"
           backgroundVideo="/images/hero.mp4"
+          backgroundImage="/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"
           height="extended"
           overlay="medium"
         />

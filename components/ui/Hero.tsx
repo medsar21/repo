@@ -48,14 +48,29 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div className={`relative ${heightClasses[height]} flex items-end justify-center overflow-hidden pb-20 md:pb-24 lg:pb-32`}>
-      {/* Vidéo de fond (prioritaire si fournie) */}
+      {/* Image de fond pour mobile (performance optimisée) */}
+      <div className="block md:hidden absolute inset-0">
+        <Image
+          src="/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"
+          alt={title}
+          fill
+          className="object-cover brightness-90"
+          priority
+          quality={75}
+          sizes="100vw"
+        />
+      </div>
+
+      {/* Vidéo de fond pour desktop uniquement */}
       {backgroundVideo ? (
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover brightness-110"
+          preload="metadata"
+          poster="/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110"
         >
           <source src={backgroundVideo} type="video/mp4" />
         </video>
