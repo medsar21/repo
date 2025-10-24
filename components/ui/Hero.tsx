@@ -48,10 +48,10 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div className={`relative ${heightClasses[height]} flex items-end justify-center overflow-hidden pb-20 md:pb-24 lg:pb-32`}>
-      {/* Background - Vidéo pour desktop, Image pour mobile */}
+      {/* Background - Vidéo pour desktop ET mobile */}
       {backgroundVideo && (
         <>
-          {/* Vidéo de fond pour desktop uniquement */}
+          {/* Vidéo de fond - PARTOUT (desktop + mobile) */}
           <video
             autoPlay
             loop
@@ -59,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({
             playsInline
             preload="auto"
             poster={backgroundImage || "/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"}
-            className="hidden md:block absolute inset-0 w-full h-full object-cover brightness-110 z-0"
+            className="absolute inset-0 w-full h-full object-cover brightness-110 z-0"
             style={{ 
               objectFit: 'cover',
               width: '100%',
@@ -69,19 +69,6 @@ const Hero: React.FC<HeroProps> = ({
             <source src={backgroundVideo} type="video/mp4" />
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
-          
-          {/* Image de fond pour mobile (performance optimisée) */}
-          <div className="block md:hidden absolute inset-0 z-0">
-            <Image
-              src={backgroundImage || "/images/Equipe-maroc-coupe-du-monde-qatar-2022.jpg"}
-              alt={title}
-              fill
-              className="object-cover brightness-90"
-              priority
-              quality={75}
-              sizes="100vw"
-            />
-          </div>
         </>
       )}
       
